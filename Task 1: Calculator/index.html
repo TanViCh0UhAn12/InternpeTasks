@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+  <div class="calculator">
+    <h2>Calculator</h2>
+    <h5>Designed by Tanvi Chouhan</h5>
+    <input type="text" id="res" readonly />
+    <!--Readonly : User can see and interact with the field's value, but cannot modify it directly.-->
+    <div class="kp">
+      <button onclick="clrResult()">C</button>
+      <button onclick="delLast()">Del</button>
+      <button onclick="result()">=</button>
+      <button onclick="apndOprtr('+')">+</button>
+      <button onclick="apndNmbr(7)">7</button>
+      <button onclick="apndNmbr(8)">8</button>
+      <button onclick="apndNmbr(9)">9</button>
+      <button onclick="apndOprtr('-')">-</button>
+      <button onclick="apndNmbr(4)">4</button>
+      <button onclick="apndNmbr(5)">5</button>
+      <button onclick="apndNmbr(6)">6</button>
+      <button onclick="apndOprtr('*')">*</button>
+      <button onclick="apndNmbr(1)">1</button>
+      <button onclick="apndNmbr(2)">2</button>
+      <button onclick="apndNmbr(3)">3</button>
+      <button onclick="apndOprtr('/')">/</button>
+      <button id="sp" onclick="apndNmbr(0)">0</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
