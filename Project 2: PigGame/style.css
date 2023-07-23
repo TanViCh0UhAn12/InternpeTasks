@@ -1,0 +1,299 @@
+h1{
+  font-size: 24pt;
+font-family: "Arial";
+color: #025C7A;
+background-color: #8AD8F2;  
+border-bottom: 2px solid #025C7A;  
+border-left: 20px solid #025C7A;
+padding-left: 20px; 
+}
+.dice{
+  font-size: 15pt;
+  text-align: center;
+  font-family: "Tahoma";
+  background-color: #8ab7f2;
+  color: #050f69;  
+  border: 4px dotted #053069; 
+  border-radius: 15px;
+  padding: 10px;
+  
+  }
+
+  h2{
+    font-size: 40pt;
+    font-family: "Times New Roman";
+    text-decoration: underline;
+    font-weight: bold;
+    color: #0804c2;  
+    font-style: italic;
+    text-shadow: 2px 2px #AAAAAA;
+    }
+  
+*{
+  box-sizing: border-box;
+}
+
+
+
+.roll-board {
+  float: center;
+  width: 100%;
+  padding: 10 10px;
+  box-shadow: 0px 0px 20px #0888af;
+  background-color:#8ab7f254;
+
+}
+
+
+.roll-board {margin: 0 -5px;}
+
+
+.roll-board:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive column */
+@media screen and (max-width: 600px) {
+  .roll-board {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.roll-board {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.role {
+  text-align: left;
+}
+.role h2 {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.role ul {
+  margin: 0;
+  color:#025C7A;
+  font-weight: 800;
+  font-style: italic;
+  
+}
+[class^="player"].turn {
+  font-weight: bold;
+  background-color: rgba(59, 190, 230, 0.575);
+  box-shadow: 0px 0px 20px #0888af;
+}
+[class^="player"].winner {
+  background-color: #ffb6b6;
+  box-shadow: 0px 0px 20px #959595;
+}
+.dice.oops {
+  font-weight: bold;
+  color: #f00;
+}
+.panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.panel > div {
+  border: 1px solid #bbb;
+  padding: 30px 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+.panel .name {
+  margin-top: 0;
+}
+
+.control-panel{
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+
+
+/* 12 */
+.btn-hold{
+  color: #000000;
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-hold span {
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #0bf487;
+  box-shadow: 0 0 5px #0bf487, 0 0 5px #0bf487 inset;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-hold span:nth-child(1) {
+  box-shadow: 0 0 5px #0bf487, 0 0 5px #0bf487 inset;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-hold span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-hold:hover span:nth-child(1) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-hold:hover span:nth-child(2) {
+  background: #000;
+  color: #000;
+  box-shadow: 0 0 5px #0b70f4, 0 0 5px #0bf487 inset;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+/* Start */
+.btn-start{
+  color: #000000;
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-start span {
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #f40b51;
+  box-shadow: 0 0 5px #f40b51, 0 0 5px #f40b51 inset;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-start span:nth-child(1) {
+  box-shadow: 0 0 5px #f40b51, 0 0 5px #f40b51 inset;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-start span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-start:hover span:nth-child(1) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-start:hover span:nth-child(2) {
+  background: #000;
+  color: #000;
+  box-shadow: 0 0 5px #f40b51, 0 0 5px #f40b51 inset;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+
+/* roll */
+.btn-roll{
+  color: #000000;
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-roll span {
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #0b70f4;
+  box-shadow: 0 0 5px #0b70f4, 0 0 5px #0b70f4 inset;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-roll span:nth-child(1) {
+  box-shadow: 0 0 5px #0b70f4, 0 0 5px #0b70f4 inset;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-roll span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-roll:hover span:nth-child(1) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-roll:hover span:nth-child(2) {
+  background: #000;
+  color: #000;
+  box-shadow: 0 0 5px #0b70f4, 0 0 5px #0b70f4 inset;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
